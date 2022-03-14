@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<plugins>
+	
+    <pyqgis_plugin name="SVP Meta Florestal" version="0.2">
+        <description> Plugin desenvolvido para auxílio das Investidas da Meta Florestal. </description>
+        <qgis_minimum_version> 3.10 </qgis_minimum_version>
+        <file_name>fvale_mflorestal.zip</file_name>
+        <author_name>Herbert Lincon</author_name>
+        <download_url>https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/blob/main/fvale_mflorestal.zip</download_url>
+    </pyqgis_plugin>
+
+	
+</plugins>
