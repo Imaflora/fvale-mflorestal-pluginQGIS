@@ -429,8 +429,7 @@ class f2_implement(QgsProcessingAlgorithm):
         return QIcon(os.path.join(PLUGINPATH, 'imgs', 'wrikeLogo.svg'))
         
     def helpUrl(self):
-        return 'www.'
-        #TODO
+        return 'File:///' + os.path.join(PLUGINPATH, 'manuals', 'f2_implementacao.pdf')
 
     def tr(self, string):
         return QCoreApplication.translate('Processing2', string)

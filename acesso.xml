@@ -4,9 +4,9 @@
     <pyqgis_plugin name="Sistema de Validação de Polígonos (SVP) Meta Florestal" version="0.2">
         <description>Plugin desenvolvido para auxílio das Investidas da Meta Florestal.</description>
         <qgis_minimum_version>3.16</qgis_minimum_version>
-        <file_name>fvale-mflorestal-pluginQGIS-test-zip.zip</file_name>
+        <file_name>fvale-mflorestal-pluginQGIS.zip</file_name>
         <author_name>Herbert Lincon</author_name>
-        <download_url>https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/archive/refs/heads/test-zip.zip</download_url>
+        <download_url>https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/archive/refs/heads/main.zip</download_url>
     </pyqgis_plugin>
 
 	

@@ -389,8 +389,7 @@ class f1_propriedade(QgsProcessingAlgorithm):
         return QIcon(os.path.join(PLUGINPATH, 'imgs', 'wrikeLogo.svg'))
         
     def helpUrl(self):
-        return 'www.'
-        #TODO
+        return 'File:///' + os.path.join(PLUGINPATH, 'manuals', 'f1_propriedade.pdf')
 
     def tr(self, string):
         return QCoreApplication.translate('Processing2', string)

@@ -131,8 +131,7 @@ class f0_criar(QgsProcessingAlgorithm):
         return QIcon(os.path.join(PLUGINPATH, 'imgs', 'newFile.png'))
 
     def helpUrl(self):
-        return 'www.'
-        #TODO
+        return 'File:///' + os.path.join(PLUGINPATH, 'manuals', 'f0_desenhar.pdf')
 
     def createInstance(self):
         """
