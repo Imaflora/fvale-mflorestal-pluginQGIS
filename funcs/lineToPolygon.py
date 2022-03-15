@@ -2,7 +2,6 @@
 Model exported as python.
 Name : func 04 - lines to polygons
 Group : implementacoes
-With QGIS : 32000
 """
 
 from qgis.core import (QgsProcessing,
@@ -17,6 +16,9 @@ import processing
 
 
 class lineToPolygon(QgsProcessingAlgorithm):
+    """
+    This algorithm converts lines to polygons.
+    """
 
     def initAlgorithm(self, config=None):
         """

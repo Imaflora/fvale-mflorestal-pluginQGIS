@@ -1,8 +1,7 @@
 """
 Model exported as python.
-Name : func 02 - merger
+Name : func 05 - merger
 Group : implementacoes
-With QGIS : 32000
 """
 
 from qgis.PyQt.QtCore import QCoreApplication
@@ -28,7 +27,7 @@ PLUGINPATH = os.path.split(os.path.dirname(__file__))[0]
 class merger(QgsProcessingAlgorithm):
     """
     This algorithm merge many files in many possibilities
-    and run func01refactor.py
+    and return all merged and converted to polygons.
     """
 
     def initAlgorithm(self, config=None):

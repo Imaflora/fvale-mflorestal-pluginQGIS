@@ -2,7 +2,6 @@
 Model exported as python.
 Name : func 01 - refactor
 Group : implementacoes
-With QGIS : 32000
 """
 
 from asyncio.windows_events import NULL
@@ -32,7 +31,7 @@ PLUGINPATH = os.path.split(os.path.dirname(__file__))[0]
 class f1_propriedade(QgsProcessingAlgorithm):
     """
     This algorithm refactor and dissolve the files to create a unique
-    and safe file for the indicated id.
+    and safe file for the indicated ID_Area.
     """
 
     INPUT = 'INPUT'
@@ -391,6 +390,7 @@ class f1_propriedade(QgsProcessingAlgorithm):
         
     def helpUrl(self):
         return 'www.'
+        #TODO
 
     def tr(self, string):
         return QCoreApplication.translate('Processing2', string)

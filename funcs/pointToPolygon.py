@@ -2,7 +2,6 @@
 Model exported as python.
 Name : func 03 - pontos-polígonos
 Group : implementacoes
-With QGIS : 32000
 """
 
 from qgis.core import (QgsProcessing,
@@ -18,6 +17,9 @@ import processing
 
 
 class pointToPolygon(QgsProcessingAlgorithm):
+    """
+    This algorithm converts points to polygons.
+    """
 
     def initAlgorithm(self, config=None):
         """

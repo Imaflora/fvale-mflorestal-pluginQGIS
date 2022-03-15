@@ -13,8 +13,8 @@ email=herbert.santos@imaflora.org
 about=Este plugin foi desenvolvido para auxiliar as Investidas da Meta Florestal.
         <br> Os arquivos gerados pelas ferramentas disponíveis, são arquivos nos formatos corretos para as demais etapas da Meta Florestal.
 
-tracker=https://www.imaflora.org/
-repository=https://github.com/HerbertLincon/fvale-mflorestal-pluginQGIS
+tracker=https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/issues
+repository=https://github.com/Imaflora/fvale-mflorestal-pluginQGIS
 # End of mandatory metadata
 
 # Recommended items:

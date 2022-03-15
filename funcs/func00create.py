@@ -2,7 +2,6 @@
 Model exported as python.
 Name : func 00 - create file
 Group : implementacoes
-With QGIS : 32000
 """
 
 from qgis.PyQt.QtGui import QIcon
@@ -133,6 +132,7 @@ class f0_criar(QgsProcessingAlgorithm):
 
     def helpUrl(self):
         return 'www.'
+        #TODO
 
     def createInstance(self):
         """
