@@ -1,6 +1,10 @@
 <h1 align="center">
-    <img alt="Fundo Vale" src="https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/blob/main/imgs/fundoVale.png" />
-    <img alt="Imaflorae" src="https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/blob/main/imgs/imafloraLogo.png" />
+    <a href="http://www.fundovale.org/">
+    <img alt="Fundo Vale" width=250 src="https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/blob/main/imgs/fundoVale.png" />
+    </a>
+    <a href="https://www.imaflora.org/">
+    <img alt="Imaflorae" width=250 src="https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/blob/main/imgs/imafloraLogo.png" />
+    </a>
 </h1>
 
 <h4 align="center">
@@ -14,7 +18,7 @@
 
 ## :rocket: Propósito
 
-Este plugin foi desenvolvido no âmbito do projeto Meta Florestal da Fundo Vale, com parceria com o Imaflora.
+Este plugin foi desenvolvido no âmbito do projeto Meta Florestal da [Fundo Vale](http://www.fundovale.org/), com parceria com o [Imaflora](https://www.imaflora.org/).
 O propósito principal do plugin é fornecer modos para que os colaboradores das investidas deste projeto possam criar os polígonos das áreas em intervenção diretamente no QGIS, bem como corrigir estes polígonos e preencher a tabela de atributos de forma padronizada, antes de enviar os aquivos a plataforma Wrike para análise.
 
 ## :information_source: Como utilizar
@@ -23,4 +27,4 @@ Siga este [Manual](https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/blob/
 
 ---
 
-Desenvolvido por [Herbert Lincon R. A. Santos](https://github.com/HerbertLincon) / Imaflora :wave: herbert.santos@imaflora.org
+Desenvolvido por [Herbert Lincon R. A. Santos](https://github.com/HerbertLincon) / [Imaflora](https://www.imaflora.org/) :wave: herbert.santos@imaflora.org

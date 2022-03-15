@@ -78,7 +78,7 @@ class fvaleMetaProvider(QgsProcessingProvider):
         """
         return QIcon(os.path.join(
                     PLUGINPATH,
-                    'fvale-mflorestal-pluginQGIS',
+                    'fvale-mflorestal-pluginQGIS-main',
                     'imgs',
                     'fundoValeLogo.png'
                     )
