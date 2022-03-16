@@ -1,8 +1,8 @@
 <h1 align="center">
     <a href="http://www.fundovale.org/">
-    <img alt="Fundo Vale" height=250  src="https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/blob/main/imgs/fundoVale.png" /></a>
+    <img alt="Fundo Vale" width=250 src="https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/blob/main/imgs/fundoVale.png" /></a>
     <a href="https://www.imaflora.org/">
-    <img alt="Imaflorae" height=250 src="https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/blob/main/imgs/imafloraLogo.png" /></a>
+    <img alt="Imaflorae" width=300 src="https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/blob/main/imgs/imafloraLogo.png" /></a>
 </h1>
 
 <h4 align="center">

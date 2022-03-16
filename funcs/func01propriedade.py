@@ -45,7 +45,7 @@ class f1_propriedade(QgsProcessingAlgorithm):
         self.addParameter(QgsProcessingParameterMultipleLayers('linhas', 'Arquivos de Linhas', optional=True, layerType=QgsProcessing.TypeVectorLine, defaultValue=None))
         self.addParameter(QgsProcessingParameterMultipleLayers('pontos', 'Arquivos de Pontos', optional=True, layerType=QgsProcessing.TypeVectorPoint, defaultValue=None))
         
-        self.addParameter(QgsProcessingParameterNumber('id', 'ID da Área Implementada', type=QgsProcessingParameterNumber.Integer, minValue=0, maxValue=9999, defaultValue=0))
+        self.addParameter(QgsProcessingParameterNumber('id', 'ID da Área Contratada', type=QgsProcessingParameterNumber.Integer, minValue=0, maxValue=9999, defaultValue=0))
 
         self.addParameter(QgsProcessingParameterEnum('investida', 'Investida que atuou nesta área', options=['Belterra','Bioenergia','Caaporã','Inocas','Regenera'], allowMultiple=False, usesStaticStrings=False, defaultValue=None))
         
@@ -59,7 +59,7 @@ class f1_propriedade(QgsProcessingAlgorithm):
         idsequencia.setFlags(idsequencia.flags() | QgsProcessingParameterDefinition.FlagAdvanced)
         self.addParameter(idsequencia)
 
-        self.addParameter(QgsProcessingParameterFeatureSink('refatorado', 'Polígonos Corrigidos para envio ao Wrike', optional=True, type=QgsProcessing.TypeVectorAnyGeometry, createByDefault=True, defaultValue=None))
+        self.addParameter(QgsProcessingParameterFeatureSink('refatorado', 'Polígonos Corrigidos para envio ao Wrike - Salvar como o exemplo AAA0000_propriedade', optional=True, type=QgsProcessing.TypeVectorAnyGeometry, createByDefault=True, defaultValue=None))
 
 
     def processAlgorithm(self, parameters, context, model_feedback):
@@ -374,7 +374,7 @@ class f1_propriedade(QgsProcessingAlgorithm):
         Se arquivos de pontos forem selecionados, é possível definir em <b>Parâmetros avançados</b>, no campo <b>GRUPO</b>, um atributo destes pontos que delimite diferentes áreas, e no campo <b>SEQUÊNCIA</b> um atributo que indique a ordem ou sequência deles (Ex: data; vertex_id).
         Insira o número do ID da Área Implementada, selecione a Investida atuante, e indique o nome do Proprietário da Área.
     
-    <b>O arquivo gerado deverá ser <font color=red>salvo</font> e estará pronto para <font color=red>envio</font> ao Wrike</b>.
+    <b>O arquivo gerado deverá ser <font color=red>salvo</font> com a nomenclatura <b>AAA0000_propriedade</b> e estará pronto para <font color=red>envio</font> ao Wrike</b>.
     <br>    Para mais esclarecimentos clique no botão <b>Help</b> abaixo.
     
     <center><img width=200 src="{os.path.join(PLUGINPATH, 'imgs', 'fundoVale.png')}"></center>

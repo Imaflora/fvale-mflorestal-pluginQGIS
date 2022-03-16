@@ -414,7 +414,7 @@ class f2_implement(QgsProcessingAlgorithm):
         Se arquivos de pontos forem selecionados, é possível definir em <b>Parâmetros avançados</b>, no campo <b>GRUPO</b>, um atributo destes pontos que delimite diferentes áreas, e no campo <b>SEQUÊNCIA</b> um atributo que indique a ordem ou sequência deles (Ex: data; vertex_id).
         Insira o número do ID da Área Implementada, selecione a Investida atuante, selecione as Culturas utilizadas e/ou descreva em Outros caso tenha utilizado alguma que <u>não esteja abrangida na listagem</u> e indique a <b>Data Final</b> de implementação.
     
-    <b>O arquivo gerado deverá ser <font color=red>salvo</font> e estará pronto para <font color=red>envio</font> ao Wrike</b>.
+    <b>O arquivo gerado deverá ser <font color=red>salvo</font> com a nomenclatura <b>AAA0000_propriedade</b> e estará pronto para <font color=red>envio</font> ao Wrike</b>.
     <br>    Para mais esclarecimentos clique no botão <b>Help</b> abaixo.
     
     <center><img width=200 src="{os.path.join(PLUGINPATH, 'imgs', 'fundoVale.png')}"></center>
