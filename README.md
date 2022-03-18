@@ -21,7 +21,7 @@ O propósito principal do plugin é fornecer modos para que os colaboradores das
 
 ## :information_source: Como utilizar
 
-Siga este [Manual](https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/blob/test-zip/manuals/manual_instalacao.pdf) para instalar o QGIS em versão compatível e posteriormente instalar este plugin em sua versão mais atual.
+Siga este [Manual](https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/blob/main/manuals/manual_instalacao.pdf) para instalar o QGIS em versão compatível e posteriormente instalar este plugin em sua versão mais atual.
 
 ---
 
