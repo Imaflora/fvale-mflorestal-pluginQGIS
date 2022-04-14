@@ -4,7 +4,6 @@ Name : func 01 - refactor
 Group : implementacoes
 """
 
-from asyncio.windows_events import NULL
 from qgis.PyQt.QtCore import QCoreApplication
 from PyQt5.QtCore import Qt
 from qgis.PyQt.QtGui import QIcon

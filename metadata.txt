@@ -6,7 +6,7 @@
 name=Sistema de Validação de Polígonos (SVP) Meta Florestal
 qgisMinimumVersion=3.22.4
 description=Plugin desenvolvido pelo Imaflora em parceria com a Fundo Vale.
-version=1.0
+version=1.0.1
 author=Herbert Lincon R. A. Santos / Imaflora
 email=herbert.santos@imaflora.org
 
@@ -22,6 +22,7 @@ repository=https://github.com/Imaflora/fvale-mflorestal-pluginQGIS
 hasProcessingProvider=yes
 # Uncomment the following line and add your changelog:
 changelog=
+    1.0.1 - correção acesso via Max - 14/04/2022
     1.0.0 - versão estável disponível para uso - 08/04/2022
     0.5.0 - alteração de versão mínima do QGIS - 18/03/2022
     0.4.0 - manuais finalizados - 16/03/2022
