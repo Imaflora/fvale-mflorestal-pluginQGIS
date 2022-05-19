@@ -111,7 +111,7 @@ class f0_criar(QgsProcessingAlgorithm):
         """
         return f"""<html>
   <body bgcolor=#fcfcfc style="font-family:Tahoma;text-align:justify;">      
-    <h2>Sistema de Validação de Polígonos (SVP) Meta Florestal</h2>
+    <h2>Sistema de Validação de Polígonos (SVP) Compromisso Florestal</h2>
     <h3>Desenhar Polígonos</h3>
     <br>    Ferramenta utilizada para desenhar diretamente no QGIS os polígonos das áreas contratadas e/ou implementadas.
        O arquivo gerado estará vazio.

@@ -6,7 +6,7 @@
 </h1>
 
 <h4 align="center">
-  Sistema de Validação de Polígonos (SVP) Meta Florestal
+  Sistema de Validação de Polígonos (SVP) Compromisso Florestal
 </h4>
 
 <p align="center">
@@ -16,7 +16,7 @@
 
 ## :rocket: Propósito
 
-Este plugin foi desenvolvido no âmbito do projeto Meta Florestal da [Fundo Vale](http://www.fundovale.org/), com parceria com o [Imaflora](https://www.imaflora.org/).
+Este plugin foi desenvolvido no âmbito do projeto Compromisso Florestal da [Fundo Vale](http://www.fundovale.org/), com parceria com o [Imaflora](https://www.imaflora.org/).
 O propósito principal do plugin é fornecer modos para que os colaboradores das investidas deste projeto possam criar os polígonos das áreas em intervenção diretamente no QGIS, bem como corrigir estes polígonos e preencher a tabela de atributos de forma padronizada, antes de enviar os aquivos a plataforma Wrike para análise.
 
 ## :information_source: Como utilizar

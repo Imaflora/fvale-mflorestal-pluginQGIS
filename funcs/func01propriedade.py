@@ -5,16 +5,12 @@ Group : implementacoes
 """
 
 from qgis.PyQt.QtCore import QCoreApplication
-from PyQt5.QtCore import Qt
 from qgis.PyQt.QtGui import QIcon
 from qgis.core import (QgsProcessing,
                        QgsProcessingAlgorithm,
                        QgsProcessingMultiStepFeedback,
-                       QgsProcessingParameterVectorLayer,
                        QgsProcessingParameterFeatureSink,
-                       QgsCoordinateReferenceSystem,
                        QgsProcessingParameterString,
-                       QgsProcessingParameterDateTime,
                        QgsProcessingParameterField,
                        QgsProcessingParameterEnum,
                        QgsProcessingParameterMultipleLayers,
@@ -45,8 +41,10 @@ class f1_propriedade(QgsProcessingAlgorithm):
         self.addParameter(QgsProcessingParameterMultipleLayers('pontos', 'Arquivos de Pontos', optional=True, layerType=QgsProcessing.TypeVectorPoint, defaultValue=None))
         
         self.addParameter(QgsProcessingParameterNumber('id', 'ID da Área Contratada', type=QgsProcessingParameterNumber.Integer, minValue=0, maxValue=9999, defaultValue=0))
+        self.addParameter(QgsProcessingParameterNumber('talhao', 'Número do talhão, parcela ou módulo (subdivisão do ID)', type=QgsProcessingParameterNumber.Integer, minValue=1, maxValue=99, defaultValue=1))
 
         self.addParameter(QgsProcessingParameterEnum('investida', 'Investida que atuou nesta área', options=['Belterra','Bioenergia','Caaporã','Inocas','Regenera'], allowMultiple=False, usesStaticStrings=False, defaultValue=None))
+        self.addParameter(QgsProcessingParameterEnum('estado', 'Estado (UF) da área', options=['Acre','Alagoas','Amapá','Amazonas','Bahia','Ceará','Distrito Federal','Espírito Santo','Goiás','Maranhão','Mato Grosso','Mato Grosso do Sul','Minas Gerais','Pará','Paraíba','Paraná','Pernambuco','Piauí','Rio de Janeiro','Rio Grande do Norte','Rio Grande do Sul','Rondônia','Roraima','Santa Catarina','São Paulo','Sergipe','Tocantins'], allowMultiple=False, usesStaticStrings=False, defaultValue=None))
         
         self.addParameter(QgsProcessingParameterString('propriet', 'Proprietário da Área', multiLine=False, defaultValue='Nome do Proprietário da Área'))
 
@@ -175,7 +173,109 @@ class f1_propriedade(QgsProcessingAlgorithm):
             """)
             return {}
 
-        id = sigla + str(parameters['id']).zfill(4)
+        if parameters['estado'] == 0:
+            uf = 'AC'
+
+        elif parameters['estado'] == 1:
+            uf = 'AL'
+
+        elif parameters['estado'] == 2:
+            uf = 'AP'
+
+        elif parameters['estado'] == 3:
+            uf = 'AM'
+
+        elif parameters['estado'] == 4:
+            uf = 'BA'
+
+        elif parameters['estado'] == 5:
+            uf = 'CE'
+
+        elif parameters['estado'] == 6:
+            uf = 'DF'
+
+        elif parameters['estado'] == 7:
+            uf = 'ES'
+
+        elif parameters['estado'] == 8:
+            uf = 'GO'
+
+        elif parameters['estado'] == 9:
+            uf = 'MA'
+
+        elif parameters['estado'] == 10:
+            uf = 'MT'
+
+        elif parameters['estado'] == 11:
+            uf = 'MS'
+
+        elif parameters['estado'] == 12:
+            uf = 'MG'
+
+        elif parameters['estado'] == 13:
+            uf = 'PA'
+
+        elif parameters['estado'] == 14:
+            uf = 'PB'
+
+        elif parameters['estado'] == 15:
+            uf = 'PR'
+
+        elif parameters['estado'] == 16:
+            uf = 'PE'
+
+        elif parameters['estado'] == 17:
+            uf = 'PI'
+
+        elif parameters['estado'] == 18:
+            uf = 'RJ'
+
+        elif parameters['estado'] == 19:
+            uf = 'RN'
+
+        elif parameters['estado'] == 20:
+            uf = 'RS'
+
+        elif parameters['estado'] == 21:
+            uf = 'RO'
+
+        elif parameters['estado'] == 22:
+            uf = 'RR'
+
+        elif parameters['estado'] == 23:
+            uf = 'SC'
+
+        elif parameters['estado'] == 24:
+            uf = 'SP'
+
+        elif parameters['estado'] == 25:
+            uf = 'SE'
+
+        elif parameters['estado'] == 26:
+            uf = 'TO'
+
+        else:
+            feedback.reportError("""ATENÇÃO! OBSERVE O ERRO ABAIXO:
+            
+            
+
+
+
+            """)
+            feedback.pushInfo("""Valor inválido para ESTADO. Selecione uma opção válida e execute novamente.
+            
+
+
+            
+
+            """)
+            feedback.pushWarning("""Processo Encerrado.
+            
+            
+            """)
+            return {}
+
+        id = sigla + '-' + uf + str(parameters['id']).zfill(4) + '-' + str(parameters['talhao']).zfill(2)
        
         # renomeando arquivo de saída
         parameters['refatorado'].destinationName = 'Salvar e Enviar ao Wrike'
@@ -260,7 +360,7 @@ class f1_propriedade(QgsProcessingAlgorithm):
 
         # Calculadora de campo
         alg_params = {
-            'FIELD_LENGTH': 9,
+            'FIELD_LENGTH': 15,
             'FIELD_NAME': 'id',
             'FIELD_PRECISION': 0,
             'FIELD_TYPE': 2,  # String
@@ -320,7 +420,7 @@ class f1_propriedade(QgsProcessingAlgorithm):
         
         # Editar campos
         alg_params = {
-            'FIELDS_MAPPING': [{'expression': '\"id\"','length': 9,'name': 'id','precision': 0,'type': 10},{'expression': 'proprietar','length': 255,'name': 'proprietar','precision': 0,'type': 10},{'expression': 'to_date(now())','length': 0,'name': 'dt_arquivo','precision': 0,'type': 14},{'expression': '\"tipo\"','length': 1,'name': 'tipo','precision': 0,'type': 2}],
+            'FIELDS_MAPPING': [{'expression': '\"id\"','length': 15,'name': 'id','precision': 0,'type': 10},{'expression': 'proprietar','length': 255,'name': 'proprietar','precision': 0,'type': 10},{'expression': 'to_date(now())','length': 0,'name': 'dt_arquivo','precision': 0,'type': 14},{'expression': '\"tipo\"','length': 1,'name': 'tipo','precision': 0,'type': 2}],
             'INPUT': outputs['CalculadoraDeCampoTipo']['OUTPUT'],
             'OUTPUT': parameters['refatorado']
         }
@@ -365,7 +465,7 @@ class f1_propriedade(QgsProcessingAlgorithm):
         """
         return f"""<html>
   <body bgcolor=#fcfcfc style="font-family:Tahoma;text-align:justify;">      
-    <h2>Sistema de Validação de Polígonos (SVP) Meta Florestal</h2>
+    <h2>Sistema de Validação de Polígonos (SVP) Compromisso Florestal</h2>
     <h3>Preparar Arquivo da propriedade para envio ao Wrike</h3>
     <br>    Ferramenta utilizada para corrigir e preparar o arquivo da Área Contratada / Propriedade para ser carregado no Wrike.
         Selecione os arquivos que representem <b>apenas uma área em intervenção (ID_Area)</b>.
@@ -373,7 +473,7 @@ class f1_propriedade(QgsProcessingAlgorithm):
         Se arquivos de pontos forem selecionados, é possível definir em <b>Parâmetros avançados</b>, no campo <b>GRUPO</b>, um atributo destes pontos que delimite diferentes áreas, e no campo <b>SEQUÊNCIA</b> um atributo que indique a ordem ou sequência deles (Ex: data; vertex_id).
         Insira o número do ID da Área Implementada, selecione a Investida atuante, e indique o nome do Proprietário da Área.
     
-    <b>O arquivo gerado deverá ser <font color=red>salvo</font> com a nomenclatura <b>AAA0000_propriedade</b> e estará pronto para <font color=red>envio</font> ao Wrike</b>.
+    <b>O arquivo gerado deverá ser <font color=red>salvo</font> com a nomenclatura <b>AAA-UF0000-00_propriedade</b> e estará pronto para <font color=red>envio</font> ao Wrike</b>.
     <br>    Para mais esclarecimentos clique no botão <b>Help</b> abaixo.
     
     <center><img width=200 src="{os.path.join(PLUGINPATH, 'imgs', 'fundoVale.png')}"></center>

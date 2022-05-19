@@ -3,15 +3,15 @@
 # This file should be included when you package your plugin.# Mandatory items:
 
 [general]
-name=Sistema de Validação de Polígonos (SVP) Meta Florestal
+name=Sistema de Validação de Polígonos (SVP) Compromisso Florestal
 qgisMinimumVersion=3.22.4
 description=Plugin desenvolvido pelo Imaflora em parceria com a Fundo Vale.
-version=1.0.1
+version=1.1.0
 author=Herbert Lincon R. A. Santos / Imaflora
 email=herbert.santos@imaflora.org
 
-about=Este plugin foi desenvolvido para auxiliar as Investidas da Meta Florestal.
-        <br> Os arquivos gerados pelas ferramentas disponíveis, são arquivos nos formatos corretos para as demais etapas da Meta Florestal.
+about=Este plugin foi desenvolvido para auxiliar as Investidas da Compromisso Florestal.
+        <br> Os arquivos gerados pelas ferramentas disponíveis, são arquivos nos formatos corretos para as demais etapas da Compromisso Florestal.
 
 tracker=https://github.com/Imaflora/fvale-mflorestal-pluginQGIS/issues
 repository=https://github.com/Imaflora/fvale-mflorestal-pluginQGIS
@@ -22,7 +22,9 @@ repository=https://github.com/Imaflora/fvale-mflorestal-pluginQGIS
 hasProcessingProvider=yes
 # Uncomment the following line and add your changelog:
 changelog=
-    1.0.1 - correção acesso via Max - 14/04/2022
+    1.1.0 - adição das funções 3 e 4 e plantio em linhas - 20/05/2022
+    1.0.2 - correção na geração de polígonos de pontos - 10/05/2022
+    1.0.1 - correção acesso via Mac - 14/04/2022
     1.0.0 - versão estável disponível para uso - 08/04/2022
     0.5.0 - alteração de versão mínima do QGIS - 18/03/2022
     0.4.0 - manuais finalizados - 16/03/2022

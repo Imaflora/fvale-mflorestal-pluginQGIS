@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+new_features.txt
 
 # C extensions
 *.so

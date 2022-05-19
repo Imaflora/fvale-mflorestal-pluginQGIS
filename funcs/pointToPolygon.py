@@ -59,7 +59,7 @@ class pointToPolygon(QgsProcessingAlgorithm):
             'CLOSE_PATH': True,
             'GROUP_EXPRESSION': parameters['group'],
             'INPUT': outputs['ReprojetarCamada']['OUTPUT'],
-            'NATURAL_SORT': False,
+            'NATURAL_SORT': True,
             'ORDER_EXPRESSION': parameters['idsequencia'],
             'OUTPUT': QgsProcessing.TEMPORARY_OUTPUT
         }
