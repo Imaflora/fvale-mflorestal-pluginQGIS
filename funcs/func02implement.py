@@ -1323,7 +1323,7 @@ class f2_implement(QgsProcessingAlgorithm):
         """
         return f"""<html>
   <body bgcolor=#fcfcfc style="font-family:Tahoma;text-align:justify;">      
-    <h2>Sistema de Validação de Polígonos (SVP) Compromisso Florestal</h2>
+    <h2>Sistema de Validação de Polígonos (SVP) Meta Florestal</h2>
     <h3>Preparar Arquivo da área implementada para envio ao Wrike</h3>
     <br>    Ferramenta utilizada para corrigir e preparar o arquivo da Área Implementada para ser carregado no Wrike.
         Selecione os arquivos que representem <b>apenas uma área em intervenção (ID_Area)</b>.

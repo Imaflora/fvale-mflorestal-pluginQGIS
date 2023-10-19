@@ -57,17 +57,17 @@ class f4_edit(QgsProcessingAlgorithm):
         """
         return 'Permitir Edição de Arquivo'
 
-    def group(self):
-        """
-        Returns the name of the group this algorithm belongs to.
-        """
-        return 'Outras Ferramentas'
+    # def group(self):
+    #     """
+    #     Returns the name of the group this algorithm belongs to.
+    #     """
+    #     return 'Outras Ferramentas'
 
-    def groupId(self):
-        """
-        Returns the unique ID of the group this algorithm belongs to.
-        """
-        return 'outras'
+    # def groupId(self):
+    #     """
+    #     Returns the unique ID of the group this algorithm belongs to.
+    #     """
+    #     return 'outras'
 
 
     def shortHelpString(self):
@@ -76,7 +76,7 @@ class f4_edit(QgsProcessingAlgorithm):
         """
         return f"""<html>
   <body bgcolor=#fcfcfc style="font-family:Tahoma;text-align:justify;">      
-    <h2>Sistema de Validação de Polígonos (SVP) Compromisso Florestal</h2>
+    <h2>Sistema de Validação de Polígonos (SVP) Meta Florestal</h2>
     <h3>Realizar edições em um arquivo bloqueado</h3>
     <br>    Ferramenta utilizada para liberar edições em um arquivo bloqueado.
     Geralmente arquivos abertos em outros programas ou zipados ficam bloqueados para edição.

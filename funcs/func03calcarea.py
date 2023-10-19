@@ -644,17 +644,17 @@ class f3_calcarea(QgsProcessingAlgorithm):
         """
         return 'Calcular Área Planimétrica'
 
-    def group(self):
-        """
-        Returns the name of the group this algorithm belongs to.
-        """
-        return 'Outras Ferramentas'
+    # def group(self):
+    #     """
+    #     Returns the name of the group this algorithm belongs to.
+    #     """
+    #     return 'Outras Ferramentas'
 
-    def groupId(self):
-        """
-        Returns the unique ID of the group this algorithm belongs to.
-        """
-        return 'outras'
+    # def groupId(self):
+    #     """
+    #     Returns the unique ID of the group this algorithm belongs to.
+    #     """
+    #     return 'outras'
 
 
     def shortHelpString(self):
@@ -663,10 +663,10 @@ class f3_calcarea(QgsProcessingAlgorithm):
         """
         return f"""<html>
   <body bgcolor=#fcfcfc style="font-family:Tahoma;text-align:justify;">      
-    <h2>Sistema de Validação de Polígonos (SVP) Compromisso Florestal</h2>
+    <h2>Sistema de Validação de Polígonos (SVP) Meta Florestal</h2>
     <h3>Calcular a área planimétrica dos polígonos</h3>
     <br>    Ferramenta utilizada para calcular a área planimétrica dos polígonos inseridos.
-        Selecione o arquivo com os polígonos que deseja calcular (é possível inserir o resultado das funções Área Contratada e Área Implementada).
+        Selecione o arquivo com os polígonos que deseja calcular (é possível inserir o resultado da função Preparar Polígonos (Shapefile)).
         Apenas arquivos de polígonos são aceitos.
         A área é calculada respeitando a <b>Zona UTM</b> majoritária do polígono e através da função <b>area($geometry)</b>.
         O arquivo de saída terá duas novas colunas em sua tabela de atributos onde:<br><b>UTM</b> - é a Zona UTM em que o polígono foi enquadrado<br><b>areaha_utm</b> - Área em hectares calculada
