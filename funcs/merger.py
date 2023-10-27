@@ -42,7 +42,7 @@ class merger(QgsProcessingAlgorithm):
         self.addParameter(QgsProcessingParameterField('group', 'Grupo (Caso os pontos representem mais de um polígono)', optional=True, type=QgsProcessingParameterField.Any, parentLayerParameterName='pontos', allowMultiple=False, defaultValue=''))
         self.addParameter(QgsProcessingParameterField('idsequencia', 'Sequência (Atributo que define a sequência dos pontos como Data ou ID)', optional=True, type=QgsProcessingParameterField.Any, parentLayerParameterName='pontos', allowMultiple=False, defaultValue=''))
 
-        self.addParameter(QgsProcessingParameterFeatureSink('merged', 'Polígonos Corrigidos para envio ao Wrike', optional=True, type=QgsProcessing.TypeVectorAnyGeometry, createByDefault=True, defaultValue=None))
+        self.addParameter(QgsProcessingParameterFeatureSink('merged', 'Polígonos Corrigidos para envio ao Horus', optional=True, type=QgsProcessing.TypeVectorAnyGeometry, createByDefault=True, defaultValue=None))
 
 
     def processAlgorithm(self, parameters, context, model_feedback):

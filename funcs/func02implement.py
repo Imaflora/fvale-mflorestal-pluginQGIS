@@ -71,7 +71,7 @@ class f2_implement(QgsProcessingAlgorithm):
         buffer.setFlags(buffer.flags() | QgsProcessingParameterDefinition.FlagAdvanced)
         self.addParameter(buffer)
         
-        self.addParameter(QgsProcessingParameterFeatureSink('refatorado', 'Polígonos Corrigidos para envio ao Wrike', optional=True, type=QgsProcessing.TypeVectorAnyGeometry, createByDefault=True, defaultValue=None))
+        self.addParameter(QgsProcessingParameterFeatureSink('refatorado', 'Polígonos Corrigidos para envio ao Horus', optional=True, type=QgsProcessing.TypeVectorAnyGeometry, createByDefault=True, defaultValue=None))
 
 
     def processAlgorithm(self, parameters, context, model_feedback):
@@ -298,7 +298,7 @@ class f2_implement(QgsProcessingAlgorithm):
             return {}
 
         # renomeando arquivo de saída
-        parameters['refatorado'].destinationName = 'Salvar e Enviar ao Wrike'
+        parameters['refatorado'].destinationName = 'Salvar e Enviar ao Horus'
 
 
         if parameters['emlinha'] is False:
@@ -1324,14 +1324,14 @@ class f2_implement(QgsProcessingAlgorithm):
         return f"""<html>
   <body bgcolor=#fcfcfc style="font-family:Tahoma;text-align:justify;">      
     <h2>Sistema de Validação de Polígonos (SVP) Meta Florestal</h2>
-    <h3>Preparar Arquivo da área implementada para envio ao Wrike</h3>
-    <br>    Ferramenta utilizada para corrigir e preparar o arquivo da Área Implementada para ser carregado no Wrike.
+    <h3>Preparar Arquivo da área implementada para envio ao Horus</h3>
+    <br>    Ferramenta utilizada para corrigir e preparar o arquivo da Área Implementada para ser carregado no Horus.
         Selecione os arquivos que representem <b>apenas uma área em intervenção (ID_Area)</b>.
     Os arquivos selecionados podem ser de qualquer tipo de geometria: pontos, linhas ou polígonos, simultaneamente.
         Se arquivos de pontos forem selecionados, é possível definir em <b>Parâmetros avançados</b>, no campo <b>GRUPO</b>, um atributo destes pontos que delimite diferentes áreas, e no campo <b>SEQUÊNCIA</b> um atributo que indique a ordem ou sequência deles (Ex: data; vertex_id).
         Insira o número do ID da Área Implementada, selecione a Investida atuante, selecione as Culturas utilizadas e/ou descreva em Outros caso tenha utilizado alguma que <u>não esteja abrangida na listagem</u> e indique a <b>Data Final</b> de implementação.
     
-    <b>O arquivo gerado deverá ser <font color=red>salvo</font> com a nomenclatura <b>AAA-UF0000-00_implementado</b> e estará pronto para <font color=red>envio</font> ao Wrike</b>.
+    <b>O arquivo gerado deverá ser <font color=red>salvo</font> com a nomenclatura <b>AAA-UF0000-00_implementado</b> e estará pronto para <font color=red>envio</font> ao Horus</b>.
     <br>    Para mais esclarecimentos clique no botão <b>Help</b> abaixo.
     
     <center><img width=200 src="{os.path.join(PLUGINPATH, 'imgs', 'fundoVale.png')}"></center>
@@ -1343,7 +1343,7 @@ class f2_implement(QgsProcessingAlgorithm):
 </html>"""
 
     def icon(self):
-        return QIcon(os.path.join(PLUGINPATH, 'imgs', 'wrikeLogo.svg'))
+        return QIcon(os.path.join(PLUGINPATH, 'imgs', 'horus.png'))
         
     def helpUrl(self):
         return 'File:///' + os.path.join(PLUGINPATH, 'manuals', 'f2_implementacao.pdf')

@@ -278,7 +278,7 @@ class f1_propriedade(QgsProcessingAlgorithm):
         #id = sigla + '-' + uf + str(parameters['id']).zfill(4) + '-' + str(parameters['talhao']).zfill(2)
 
         # renomeando arquivo de saída
-        parameters['refatorado'].destinationName = 'Salvar e Enviar ao Wrike'
+        parameters['refatorado'].destinationName = 'Salvar e Enviar ao Horus'
 
         # Merger
         alg_params = {

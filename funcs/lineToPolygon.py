@@ -27,7 +27,7 @@ class lineToPolygon(QgsProcessingAlgorithm):
 
         self.addParameter(QgsProcessingParameterVectorLayer('linhas', 'Selecione o arquivo de linhas', types=[QgsProcessing.TypeVectorLine], defaultValue=None))
 
-        self.addParameter(QgsProcessingParameterFeatureSink('refatorado', 'Polígonos corrigidos para envio via Wrike', optional=True, type=QgsProcessing.TypeVectorAnyGeometry, createByDefault=True, defaultValue=None))
+        self.addParameter(QgsProcessingParameterFeatureSink('refatorado', 'Polígonos corrigidos para envio via Horus', optional=True, type=QgsProcessing.TypeVectorAnyGeometry, createByDefault=True, defaultValue=None))
 
 
     def processAlgorithm(self, parameters, context, model_feedback):
